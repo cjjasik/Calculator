@@ -1,13 +1,7 @@
+import Calculator from "./components/Calculator"
+
 export default function App() {
     return (
-        "Hello World"
+        <Calculator />
     )
 }
-
-
-
-/**
- * Top Level: Card called "Calculator" (state will live here)
- * - Display
- * - Input -> grid of buttons (all buttons will affect display)
- */
