@@ -5,8 +5,15 @@ import Keyboard from './Keyboard';
 
 
 export default function Calculator() {
+
+    const styles = {
+        calcContainer:{
+            margin: "50px"
+        }
+    }
+
     return (
-        <Container>
+        <Container style={styles.calcContainer}>
             <Row>
                 <Col>
                     <Row>
