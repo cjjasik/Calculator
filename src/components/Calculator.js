@@ -27,7 +27,7 @@ export default function Calculator() {
                         <Display display={display}/>
                     </Row>
                     <Row>
-                        <Keyboard setDisplay={setDisplay}/>
+                        <Keyboard display={display} setDisplay={setDisplay}/>
                     </Row>
                 </Col>
             </Row>

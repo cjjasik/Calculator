@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import Key from './Key';
 
-export default function Keyboard({setDisplay}) {
+export default function Keyboard({display, setDisplay}) {
     
     const styles = {
         keyboardContainer: {
@@ -22,7 +22,20 @@ export default function Keyboard({setDisplay}) {
     }
 
     const handleClick = (label) => {
-        setDisplay(label)
+        
+        if(label=== "C") {
+            setDisplay("0")
+        } else if (label === "del" && display.length === 1) {
+            setDisplay("0")
+        } else if (label === "del") {
+            let newLabel = display.substring(0, display.length-1)
+            setDisplay(newLabel)
+        } else if (display === "0") {
+            setDisplay(label);
+        } else {
+            setDisplay(display + label)
+        }
+
     }
 
     
@@ -33,13 +46,13 @@ export default function Keyboard({setDisplay}) {
                     <Key label="C" variant="warning" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="( )"/>
+                    <Key label="/" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="/"/>
+                    <Key label="*" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="delete" variant="danger" handleClick={handleClick}/>
+                    <Key label="del" variant="danger" handleClick={handleClick}/>
                 </Col>
             </Row>
 
@@ -54,7 +67,7 @@ export default function Keyboard({setDisplay}) {
                     <Key label="9" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="*" handleClick={handleClick}/>
+                    <Key label="%" handleClick={handleClick}/>
                 </Col>
             </Row>
 
@@ -69,7 +82,7 @@ export default function Keyboard({setDisplay}) {
                     <Key label="6" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="-" handleClick={handleClick}/>
+                    <Key label="+" handleClick={handleClick}/>
                 </Col>
             </Row>
 
@@ -84,7 +97,7 @@ export default function Keyboard({setDisplay}) {
                     <Key label="3" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="+" handleClick={handleClick}/>
+                    <Key label="-" handleClick={handleClick}/>
                 </Col>
             </Row>
 
