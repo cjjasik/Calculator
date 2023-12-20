@@ -8,7 +8,9 @@ export default function Calculator() {
 
     const styles = {
         calcContainer:{
-            margin: "50px"
+            margin: "50px",
+            width: "400px",
+            
         }
     }
 

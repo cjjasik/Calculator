@@ -8,7 +8,9 @@ export default function Display() {
             border: '5px solid black',
             height: '50px',
             fontSize: '40px',
-            verticalAlign: 'text-top'
+            verticalAlign: 'text-top',
+            textAlign: 'right',
+            paddingBottom: '60px'
         }
     }
     

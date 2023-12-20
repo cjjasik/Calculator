@@ -9,18 +9,23 @@ export default function Keyboard() {
             backgroundColor: 'black',
             border: '5px solid black',
             borderTop: '0px',
+            paddingTop: '10px'
         },
-        centerCol: {
-            textAlign: 'center'
-        }
 
+        centerCol: {
+            textAlign: 'center',
+        },
+
+        keyRows: {
+            paddingBottom: '10px'
+        },
     }
     
     return (
         <Container style={styles.keyboardContainer}>
-            <Row>
+            <Row style={styles.keyRows}>
                 <Col style={styles.centerCol}>
-                    <Key label="clear" variant="warning"/>
+                    <Key label="C" variant="warning"/>
                 </Col>
                 <Col style={styles.centerCol}>
                     <Key label="()"/>
@@ -33,7 +38,7 @@ export default function Keyboard() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row  style={styles.keyRows}>
                 <Col style={styles.centerCol}>
                     <Key label="7"/>
                 </Col>
@@ -48,7 +53,7 @@ export default function Keyboard() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row  style={styles.keyRows}>
                 <Col  style={styles.centerCol}>
                     <Key label="4"/>
                 </Col>
@@ -63,7 +68,7 @@ export default function Keyboard() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row  style={styles.keyRows}>
                 <Col  style={styles.centerCol}>
                     <Key label="1"/>
                 </Col>
@@ -78,9 +83,9 @@ export default function Keyboard() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row  style={styles.keyRows}>
                 <Col xs={6}  style={styles.centerCol}>
-                    <Key label="0"/>
+                    <Key label="0" isZero={true}/>
                 </Col>
                 <Col  style={styles.centerCol}>
                     <Key label="."/>
