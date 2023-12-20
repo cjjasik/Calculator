@@ -1,10 +1,13 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
 
 import Display from './Display';
 import Keyboard from './Keyboard';
 
 
 export default function Calculator() {
+
+    const [display, setDisplay] = useState("0")
 
     const styles = {
         calcContainer:{
@@ -21,10 +24,10 @@ export default function Calculator() {
             <Row>
                 <Col>
                     <Row>
-                        <Display />
+                        <Display display={display}/>
                     </Row>
                     <Row>
-                        <Keyboard />
+                        <Keyboard setDisplay={setDisplay}/>
                     </Row>
                 </Col>
             </Row>

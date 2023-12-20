@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import Key from './Key';
 
-export default function Keyboard() {
+export default function Keyboard({setDisplay}) {
     
     const styles = {
         keyboardContainer: {
@@ -20,78 +20,83 @@ export default function Keyboard() {
             paddingBottom: '10px',
         },
     }
+
+    const handleClick = (label) => {
+        setDisplay(label)
+    }
+
     
     return (
         <Container style={styles.keyboardContainer}>
             <Row style={styles.keyRows}>
                 <Col style={styles.centerCol}>
-                    <Key label="C" variant="warning"/>
+                    <Key label="C" variant="warning" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="()"/>
+                    <Key label="( )"/>
                 </Col>
                 <Col style={styles.centerCol}>
                     <Key label="/"/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="delete" variant="danger"/>
+                    <Key label="delete" variant="danger" handleClick={handleClick}/>
                 </Col>
             </Row>
 
             <Row  style={styles.keyRows}>
                 <Col style={styles.centerCol}>
-                    <Key label="7"/>
+                    <Key label="7" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="8"/>
+                    <Key label="8" handleClick={handleClick}/>
                 </Col>
                 <Col style={styles.centerCol}>
-                    <Key label="9"/>
+                    <Key label="9" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="X"/>
+                    <Key label="*" handleClick={handleClick}/>
                 </Col>
             </Row>
 
             <Row  style={styles.keyRows}>
                 <Col  style={styles.centerCol}>
-                    <Key label="4"/>
+                    <Key label="4" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="5"/>
+                    <Key label="5" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="6"/>
+                    <Key label="6" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="-"/>
+                    <Key label="-" handleClick={handleClick}/>
                 </Col>
             </Row>
 
             <Row  style={styles.keyRows}>
                 <Col  style={styles.centerCol}>
-                    <Key label="1"/>
+                    <Key label="1" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="2"/>
+                    <Key label="2" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="3"/>
+                    <Key label="3" handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="+"/>
+                    <Key label="+" handleClick={handleClick}/>
                 </Col>
             </Row>
 
             <Row  style={styles.keyRows}>
                 <Col xs={6}  style={styles.centerCol}>
-                    <Key label="0" isZero={true}/>
+                    <Key label="0" isZero={true} handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="."/>
+                    <Key label="." handleClick={handleClick}/>
                 </Col>
                 <Col  style={styles.centerCol}>
-                    <Key label="=" variant="success"/>
+                    <Key label="=" variant="success" handleClick={handleClick}/>
                 </Col>
             </Row>
         </Container>

@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap"
 
-export default function Key({label, variant='secondary', isZero=false}) {
+export default function Key({label, variant='secondary', isZero=false, handleClick}) {
     
     let buttonWidth = '65px';
     
@@ -16,6 +16,6 @@ export default function Key({label, variant='secondary', isZero=false}) {
     }
     
     return (
-        <Button variant={variant} style={styles.buttonUniform}>{label}</Button>
+        <Button variant={variant} style={styles.buttonUniform} onClick={() => handleClick(label)}>{label}</Button>
     )
 }

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 
-export default function Display() {
+export default function Display({display}) {
     
     const styles = {
         displayContainer: {
@@ -15,6 +15,10 @@ export default function Display() {
     }
     
     return (
-        <Container style={styles.displayContainer}>0</Container>
+
+        <Container style={styles.displayContainer}>
+            {display}
+        </Container>
+        
     )
 }
