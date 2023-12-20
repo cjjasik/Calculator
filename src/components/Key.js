@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap"
 
 export default function Key({label, variant='secondary', isZero=false}) {
     
-    let buttonWidth = '60px';
+    let buttonWidth = '65px';
     
     if (isZero) {
         buttonWidth = '158px'
@@ -10,7 +10,7 @@ export default function Key({label, variant='secondary', isZero=false}) {
     
     const styles ={
         buttonUniform: {
-            height: '60px',
+            height: '65px',
             width: buttonWidth
         }
     }

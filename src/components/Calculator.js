@@ -8,13 +8,15 @@ export default function Calculator() {
 
     const styles = {
         calcContainer:{
-            margin: "50px",
-            width: "400px",
+            marginTop: "50px",
+            width: "380px",
+            position: 'relative'
             
         }
     }
 
     return (
+
         <Container style={styles.calcContainer}>
             <Row>
                 <Col>

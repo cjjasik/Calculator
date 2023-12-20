@@ -17,7 +17,7 @@ export default function Keyboard() {
         },
 
         keyRows: {
-            paddingBottom: '10px'
+            paddingBottom: '10px',
         },
     }
     
